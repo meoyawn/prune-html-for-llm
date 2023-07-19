@@ -95,6 +95,7 @@ const pruneHTML = (html: string, opts: Options | undefined): string => {
 
   const filtered = filter(mapped, { cascade: true }, n => {
     const el = n as Node
+    if (el.type === "comment") return false
     if (el.type !== "element") return true
 
     return !toPrune(el)

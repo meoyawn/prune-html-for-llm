@@ -1,5 +1,5 @@
 import { spawn } from "child_process"
-import { test } from "bun:test"
+import { test } from "vitest"
 import { pruneHtmlToPug } from "./index"
 
 const pbcopy = async (text: string): Promise<void> =>
